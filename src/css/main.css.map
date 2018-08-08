@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,0CAA0C;EACtC,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;;ACFhB,MAAM;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,GAAG",
+"sources": ["../sass/_reset.sass","../sass/_header.sass"],
+"names": [],
+"file": "main.css"
+}

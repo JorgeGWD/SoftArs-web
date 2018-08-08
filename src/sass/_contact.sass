@@ -1,0 +1,126 @@
+.contact
+    position: fixed
+    right: 0px
+    bottom: 0px
+    z-index: 10
+    label.icon
+        z-index: 1000000
+        position: absolute
+        right: 50px
+        bottom: 20px
+        transition: .5s ease
+        img
+            width: 80px
+            height: auto
+            cursor: pointer
+
+.inbox
+    z-index: 100
+    position: relative
+
+input
+    display: none
+
+.box
+    position: absolute
+    /*text-align: right*/
+    right: 50px
+    bottom: -650px
+    box-shadow: 3px 3px 15px rgba(0,0,0,.3)
+    transition: .5s ease
+    p
+        padding: 20px
+        font-size: 15px
+        color: #fff
+        line-height: 23px
+        font-weight: lighter
+        background-color: #03AFF5
+        span
+            margin-bottom: 10px
+            font-size: 18px
+            font-weight: bold
+    form
+        padding: 0px 50px 30px 50px
+        width: 300px
+        background-color: #fff
+    button
+        padding: 15px
+        width: 100%
+        font-size: 13px
+        color: #fff
+        font-weight: lighter
+        border: none
+        background-color: #03AFF5
+        cursor: pointer
+
+.TextFields-textField-2
+    width: 100% !important
+
+.wrap
+    position: relative
+    label
+        display: block
+        margin-top: 15px
+        letter-spacing: 2px
+    input, select, textarea
+        width: calc(100% - 2px)
+        max-width: calc(100% - 2px)
+        min-width: calc(100% - 2px)
+        padding: 10px 0px 10px 5px
+        border: none
+        &:focus
+            outline: none
+    textarea
+        min-height: 150px
+    span.focus
+        position: absolute
+        bottom: 0px
+        left: 0px
+        width: 100%
+        border-bottom: 1px solid gray
+
+.submit-area
+    input
+        margin-top: 20px
+        padding: 15px
+        width: 100%
+        color: #fff
+        background-color: #03AFF5
+        border: none
+        cursor: pointer
+
+input#icon:checked~.box
+    bottom: 0px
+    transition: .5s ease
+
+input#icon:checked~label
+    bottom: 420px
+    opacity: 0
+    transition: .5s ease
+
+.confirmation
+    z-index: 10
+    position: absolute
+    /*text-align: right*/
+    right: 50px
+    bottom: 0px
+    padding: 50px
+    width: 300px
+    text-align: center
+    background-color: #fff
+    box-shadow: 3px 3px 15px rgba(0,0,0,.3)
+    opacity: 0
+    transition: .5s ease
+    h2
+        margin-bottom: 50px
+        font-weight: bold
+    button
+        margin-top: 50px
+        padding: 15px
+        width: 100%
+        font-size: 13px
+        color: #fff
+        font-weight: lighter
+        border: none
+        background-color: #03AFF5
+        cursor: pointer

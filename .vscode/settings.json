@@ -1,0 +1,11 @@
+{
+    "liveSassCompile.settings.formats": [
+        // More Complex
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "~/../"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false
+}
