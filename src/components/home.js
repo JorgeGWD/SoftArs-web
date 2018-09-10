@@ -13,6 +13,10 @@ class Home extends Component {
                 <div className="slider">
                     <div className="section">
                         <img src={require('../images/icon-dialog.svg')} className="softars-icon" alt="" />
+                        <div className="title">
+                            <h1>Let’s talk about it</h1>
+                        </div>
+                        <p>Our team is ready to advise you in your project’s development. <br/> We’ll find the best way to balance technology, eficiency and design.</p>
                     </div>
                 </div>
                 <div className="technology">
@@ -30,13 +34,17 @@ class Home extends Component {
                         </div>
                         <div className="right">
                             <div className="text-center">
+                                <img src={require('../images/brand-icon-angular.svg')} className="brand-icon" alt="" />
+                                <img src={require('../images/brand-icon-react.svg')} className="brand-icon" alt="" />
+                                <img src={require('../images/brand-icon-nodejs.svg')} className="brand-icon" alt="" />
+                                <img src={require('../images/brand-icon-bootstrap.svg')} className="brand-icon" alt="" />
                                 <img src={require('../images/brand-icon-javascript.svg')} className="brand-icon" alt="" />
                                 <img src={require('../images/brand-icon-larave.svg')} className="brand-icon" alt="" />
-                                <img src={require('../images/brand-icon-bootstrap.svg')} className="brand-icon" alt="" />
-                                <img src={require('../images/brand-icon-angular.svg')} className="brand-icon" alt="" />
-                                <img src={require('../images/brand-icon-nodejs.svg')} className="brand-icon" alt="" />
-                                <img src={require('../images/brand-icon-react.svg')} className="brand-icon" alt="" />
                             </div>
+                        </div>
+                        <div className="bottom">
+                            <img src={require('../images/brand-icon-unity.svg')} className="brand-icon" alt="" />
+                            <p>Get involved with the business of videogames</p>
                         </div>
                     </div>
                 </div>
