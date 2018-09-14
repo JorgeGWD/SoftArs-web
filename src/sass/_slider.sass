@@ -1,0 +1,115 @@
+.wrapper
+    max-width: 1335px
+    box-sizing: border-box
+    padding: 0 20px
+    margin: auto
+
+.wrapper a
+    display: inline-block
+    margin: 5px
+
+    
+.wrapper a:first-child
+    margin-left: 0
+
+.sliderbox
+    position: relative
+    img
+        z-index: 1
+        position: absolute
+        bottom: 0px
+        left: 0px
+
+.slider-wrapper
+    margin: 0px auto
+    position: relative
+    width: 80%
+    height: 70vh
+    overflow: hidden
+
+.slide
+    height: 70vh
+
+.slide.single
+    .title
+        display: inline-block
+    p
+        margin: 0px auto
+        width: 600px
+
+.slide.double
+    display: grid
+    grid-template-areas: 'image image animation inner inner inner inner'
+    .inner
+        padding: 0px
+        text-align: left
+    .title
+        display: inline-block
+    p
+        //margin: 0px auto
+        width: 400px
+
+.inner
+    grid-area: inner
+
+.animation
+    grid-area: animation
+
+.image
+    grid-area: image
+
+.previousButton, .nextButton
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1000
+    background: url('images/arrow.svg') no-repeat center center / 25px
+    padding: 20px
+    width: 32px
+    height: 32px
+    text-indent: -9999px
+    cursor: pointer
+    transition: .1s ease
+
+.previousButton:active, .nextButton:active
+    padding: 20px
+    background: url('images/arrow.svg') no-repeat center center / 20px
+    transition: .1s ease
+
+.previousButton
+    left: 0
+    -webkit-transform: rotate(180deg) translateY(calc(50% + 0px))
+    transform: rotate(180deg) translateY(calc(50% + 0px))
+
+.nextButton
+    right: 0
+
+.slider-content
+    text-align: center
+
+.slider-content .inner
+    z-index: 100
+    padding: 0 70px
+    box-sizing: border-box
+    position: absolute
+    width: 100%
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+
+@media (max-height: 500px)
+    .slider-wrapper, .slide
+        height: calc(100vh - 75px)
+      
+@media (max-width: 640px)
+    .slider-wrapper, .slide
+        height: calc(80vh - 75px)
+
+@media (max-height: 600px)
+    .slider-content .inner h1
+        font-size: 32px
+
+@media (max-width: 640px)
+    .slider-content .inner h1
+        font-size: 32px
