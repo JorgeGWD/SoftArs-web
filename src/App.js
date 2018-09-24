@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-// import './js/script';
+//import './js/animations';
+//import './js/bodymovin';
 
 // components
 
