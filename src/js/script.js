@@ -33,3 +33,11 @@ $('.contact').on('.send', function (e) {
     }
 })
 */
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > $('.main-wrapper').height() - 300) {
+        $('header').addClass("sticky");
+    } else {
+        $('header').removeClass("sticky");
+    }
+});

@@ -5,4 +5,3 @@ window.checkAnimation = bodymovin.loadAnimation({
     autoplay: false,
     path: './images/desktop-animation.json'
 })
-

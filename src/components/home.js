@@ -25,7 +25,6 @@ const content = [
         animation: 'animation',
     }
 ];
-console.log(content)
 
 class Home extends Component {
     render() {
@@ -40,7 +39,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className="sliderbox">
-                    <Slider className="slider-wrapper" duration="500">
+                    <Slider className="slider-wrapper" duration="500" infinite={true}>
                         {content.map((item, index) => (
                             <div
                                 key={index}
@@ -60,9 +59,11 @@ class Home extends Component {
                                     <img src={item.animation} alt="" />
                                     <div id="bm"></div>
                                 </div>
-                                <div className="image">
-                                    <img src={item.image} alt="" />
-                                </div>
+                                <ScrollAnimation animateIn="fadeInLeft">
+                                    <div className="image">
+                                        <img src={item.image} alt="" />
+                                    </div>
+                                </ScrollAnimation>
                             </div>
                         ))}
                     </Slider>
@@ -113,23 +114,23 @@ class Home extends Component {
                                 <ScrollAnimation animateIn="fadeInLeft">
                                     <p>Get involved with the business of videogames.</p>
                                 </ScrollAnimation>
-                                <div className="engines">
-                                    <ScrollAnimation animateIn="fadeInRight">
-                                        <img src={require('../images/engine-icon-defold.svg')} className="engine-icon" alt="" />
+                                <ul className="engines">
+                                    <ScrollAnimation animateIn="fadeInRight" delay={0}>
+                                        <li className="grid-item"><img src={require('../images/engine-icon-defold.svg')} className="engine-icon" alt="" /></li>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn="fadeInRight">
-                                        <img src={require('../images/engine-icon-unity.svg')} className="engine-icon" alt="" />
+                                    <ScrollAnimation animateIn="fadeInRight" delay={200}>
+                                        <li className="grid-item"><img src={require('../images/engine-icon-unity.svg')} className="engine-icon" alt="" /></li>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn="fadeInRight">
-                                        <img src={require('../images/engine-icon-corona.svg')} className="engine-icon" alt="" />
+                                    <ScrollAnimation animateIn="fadeInRight" delay={400}>
+                                        <li className="grid-item"><img src={require('../images/engine-icon-corona.svg')} className="engine-icon" alt="" /></li>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn="fadeInRight">
-                                        <img src={require('../images/engine-icon-unreal.svg')} className="engine-icon" alt="" />
+                                    <ScrollAnimation animateIn="fadeInRight" delay={600}>
+                                        <li className="grid-item"><img src={require('../images/engine-icon-unreal.svg')} className="engine-icon" alt="" /></li>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn="fadeInRight">
-                                        <img src={require('../images/engine-icon-godot.svg')} className="engine-icon" alt="" />
+                                    <ScrollAnimation animateIn="fadeInRight" delay={800}>
+                                        <li className="grid-item"><img src={require('../images/engine-icon-godot.svg')} className="engine-icon" alt="" /></li>
                                     </ScrollAnimation>
-                                </div>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -141,12 +142,12 @@ class Home extends Component {
                         <div className="right">
                             <div className="text-center">
                                 <div className="description">
-                                    <ScrollAnimation animateIn="fadeInDown">
+                                    <ScrollAnimation animateIn="fadeInUp">
                                         <div className="title">
                                             <h1>Custom experience</h1>
                                         </div>
                                     </ScrollAnimation>
-                                    <ScrollAnimation animateIn="fadeInUp">
+                                    <ScrollAnimation animateIn="fadeInUp" delay={200}>
                                         <p>“There’s no such thing as a dumb idea, only poorly focused. Here on Softars we work to ensure your idea stays on the right track.”</p>
                                     </ScrollAnimation>
                                 </div>
@@ -156,18 +157,20 @@ class Home extends Component {
                 </div>
                 <div className="follow">
                     <div className="section text-center">
-                        <ScrollAnimation animateIn="fadeInDown">
+                        <ScrollAnimation animateIn="fadeInUp">
                             <div className="title">
                                 <h1>Follow us on</h1>
                             </div>
                         </ScrollAnimation>
-                        <div className="">
-                            <img src={require('../images/social-icon-facebook.svg')} className="social-icon" alt="" />
-                            <img src={require('../images/social-icon-twitter.svg')} className="social-icon" alt="" />
-                            <img src={require('../images/social-icon-linkedin.svg')} className="social-icon" alt="" />
-                            <img src={require('../images/social-icon-instagram.svg')} className="social-icon" alt="" />
-                            <img src={require('../images/social-icon-g+.svg')} className="social-icon" alt="" />
-                        </div>
+                        <ScrollAnimation animateIn="fadeInUp" delay={200}>
+                            <div className="">
+                                <img src={require('../images/social-icon-facebook.svg')} className="social-icon" alt="" />
+                                <img src={require('../images/social-icon-twitter.svg')} className="social-icon" alt="" />
+                                <img src={require('../images/social-icon-linkedin.svg')} className="social-icon" alt="" />
+                                <img src={require('../images/social-icon-instagram.svg')} className="social-icon" alt="" />
+                                <img src={require('../images/social-icon-g+.svg')} className="social-icon" alt="" />
+                            </div>
+                        </ScrollAnimation>
                     </div>
                 </div>
             </div>
