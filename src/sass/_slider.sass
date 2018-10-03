@@ -54,14 +54,6 @@
 
 .animation
     grid-area: animation
-    #bm
-        display: inline-table
-        position: absolute
-        top: -29px
-        left: -60px
-        right: 55px
-        width: 927px
-        height: 666px
 
 .image
     grid-area: image
@@ -105,6 +97,22 @@
     left: 50%
     -webkit-transform: translate(-50%, -50%)
     transform: translate(-50%, -50%)
+
+@media (max-width: 1024px)
+    .slider-wrapper
+        width: 95%
+    .slide.single
+        p
+            width: 100%
+
+@media (max-width: 800px)
+    .sliderbox
+        img
+            bottom: 0px
+            left: -100px
+    .slide.double
+        display: grid
+        grid-template-areas: 'image animation inner inner inner'
 
 @media (max-height: 500px)
     .slider-wrapper, .slide

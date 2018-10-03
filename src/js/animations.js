@@ -3,5 +3,5 @@ window.checkAnimation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: './images/desktop-animation.json'
+    path: 'http://softars.com/static/media/desktop-animation.json'
 })

@@ -58,7 +58,7 @@ p
         background-image: linear-gradient( rgba(255,255,255,0), rgba(255,255,255,1))
     .text-center
         position: absolute
-        top: 120px
+        top: 13%
     h1
         margin-bottom: 15px
         font-size: 60px
@@ -72,7 +72,8 @@ p
     height: 50px
 
 .brand-icon
-    width: 80px
+    margin: 0px auto
+    max-width: 30%
     height: auto
 
 .social-icon
@@ -94,17 +95,19 @@ p
         float: left
         .description
             /*margin: 0px auto*/
-            width: 50%
+            width: 400px
             text-align: left
     .right
         float: right
-        .animated
+        .text-center
             width: 100%
             display: grid
             grid-template-columns: auto auto auto
-            img
+            .animated
+                width: 100%
+                img
                 margin: 40px auto
-                padding: 0px 
+                padding: 0px
                 /*padding: 10.3%
                 background-color: #fff
                 transition: .1s ease/*
@@ -122,11 +125,17 @@ p
             width: 100%
             height: auto
         .left
-            float: left
             .description
                 /*margin: 0px auto*/
                 width: 100%
-                text-align: left
+                text-align: center
+                .title h1
+                    float: none
+        .right
+            .text-center
+                width: 100%
+                display: grid
+                grid-template-columns: auto auto auto
 
 .videogame
     z-index: 0
@@ -157,16 +166,10 @@ p
         .engines
             display: grid
             grid-template-columns: auto auto auto
-
-@media (max-width: 600px)
-    .videogame
-        height: 100%
-        .engines
-            display: grid
-            grid-template-columns: auto
             li
                 img
-                    -40px 0px
+                    padding: -40px 0px
+                    max-width: 70%
 
 .experience
     z-index: 0
@@ -192,6 +195,23 @@ p
             h1
                 float: none
 
+@media (max-width: 1600px)
+    .experience
+        .left
+            width: 60%
+        .right
+            width: 40%
+            .description
+                /*margin: 0px auto*/
+                width: 100%
+                text-align: left
+
+@media (max-width: 1350px)
+    .section
+        width: 90%
+    .experience
+        background-position: -250px bottom
+
 .follow
     z-index: 0
     position: relative
@@ -202,3 +222,36 @@ p
     h1
         display: contents
         color: #fff
+
+@media (max-width: 600px)
+    .technology
+        .right
+            .text-center
+                width: 100%
+                display: grid
+                grid-template-columns: auto auto
+    .videogame
+        height: 100%
+        .title, p
+            text-align: center
+            h1
+                float: none
+        .engines
+            display: grid
+            grid-template-columns: auto auto
+            li
+                img
+                    padding: -40px 0px
+                    max-width: 80%
+
+@media (max-width: 850px)
+    .experience
+        background-image: none
+        .left
+            display: none
+        .right
+            width: 100%
+            .description
+                /*margin: 0px auto*/
+                width: 100%
+                text-align: center

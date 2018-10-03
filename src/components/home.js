@@ -75,8 +75,8 @@ class Home extends Component {
                                 <div className="description">
                                     <ScrollAnimation animateIn="fadeInDown">
                                         <div className="title">
-                                            <h1>Make it work</h1>
                                             <img src={require('../images/title-icon-system.svg')} className="softars-icon" alt="" />
+                                            <h1>Make it work</h1>
                                         </div>
                                     </ScrollAnimation>
                                     <ScrollAnimation animateIn="fadeInUp">
@@ -89,12 +89,20 @@ class Home extends Component {
                             <div className="text-center">
                                 <ScrollAnimation animateIn="fadeInRight">
                                 <img src={require('../images/brand-icon-angular.svg')} className="brand-icon" alt="" />
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeInRight">
                                 <img src={require('../images/brand-icon-react.svg')} className="brand-icon" alt="" />
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeInRight">
                                 <img src={require('../images/brand-icon-nodejs.svg')} className="brand-icon" alt="" />
                                 </ScrollAnimation>
                                 <ScrollAnimation animateIn="fadeInRight">
                                 <img src={require('../images/brand-icon-bootstrap.svg')} className="brand-icon" alt="" />
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeInRight">
                                 <img src={require('../images/brand-icon-javascript.svg')} className="brand-icon" alt="" />
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeInRight">
                                 <img src={require('../images/brand-icon-larave.svg')} className="brand-icon" alt="" />
                                 </ScrollAnimation>
                             </div>
@@ -107,8 +115,8 @@ class Home extends Component {
                             <div className="text-center">
                                 <ScrollAnimation animateIn="fadeInDown">
                                     <div className="title">
-                                        <h1>Ready for gaming</h1>
                                         <img src={require('../images/title-icon-gamedev.svg')} className="softars-icon" alt="" />
+                                        <h1>Ready for gaming</h1>
                                     </div>
                                 </ScrollAnimation>
                                 <ScrollAnimation animateIn="fadeInLeft">
