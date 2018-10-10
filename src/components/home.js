@@ -9,6 +9,7 @@ const content = [
         title: 'Let’s talk about it',
         description:
             'Our team is ready to advise you in your project’s development. We’ll find the best way to balance technology, eficiency and design.',
+        image: 'http://softars.com/static/media/title-dialog.svg',
     },
     {
         title: 'Mobile dev',
@@ -37,6 +38,9 @@ class Home extends Component {
                             <h2>Connect with the online business</h2>
                         </ScrollAnimation>
                     </div>
+                    <div className="screen text-center">
+                        <img src={require('../images/home_codebars.gif')} alt=""/>
+                    </div>
                 </div>
                 <div className="sliderbox">
                     <Slider className="slider-wrapper" duration="500" infinite={true}>
@@ -48,6 +52,7 @@ class Home extends Component {
                                 <div className="inner">
                                     <ScrollAnimation animateIn="fadeInDown">
                                         <div className="title">
+                                            <img className="softars-icon" src={item.image} alt="" />
                                             <h1>{item.title}</h1>
                                         </div>
                                     </ScrollAnimation>
@@ -172,11 +177,11 @@ class Home extends Component {
                         </ScrollAnimation>
                         <ScrollAnimation animateIn="fadeInUp" delay={200}>
                             <div className="">
-                                <img src={require('../images/social-icon-facebook.svg')} className="social-icon" alt="" />
-                                <img src={require('../images/social-icon-twitter.svg')} className="social-icon" alt="" />
-                                <img src={require('../images/social-icon-linkedin.svg')} className="social-icon" alt="" />
-                                <img src={require('../images/social-icon-instagram.svg')} className="social-icon" alt="" />
-                                <img src={require('../images/social-icon-g+.svg')} className="social-icon" alt="" />
+                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-facebook.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-twitter.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-linkedin.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-instagram.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-g+.svg')} className="social-icon" alt="" /></a>
                             </div>
                         </ScrollAnimation>
                     </div>
