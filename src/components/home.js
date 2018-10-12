@@ -16,14 +16,14 @@ const content = [
         description:
             'We like to develope accesible software with user-center design. You’ll be able to reach anyone, anywhere.',
         image: 'http://softars.com/static/media/services-mobile.png',
-        animation: 'animation',
+        animation: 'http://softars.com/static/media/slider-mobile.svg',
     },
     {
         title: 'Desktop design',
         description:
             'We build a screen friendly experience. Navegate freely with a beautiful and highly functional design aimed at your needs.',
         image: 'http://softars.com/static/media/services-desktop.png',
-        animation: 'animation',
+        animation: 'http://softars.com/static/media/slider-desktop.svg',
     }
 ];
 
@@ -43,12 +43,22 @@ class Home extends Component {
                     </div>
                 </div>
                 <div className="sliderbox">
-                    <Slider className="slider-wrapper" duration="500" infinite={true}>
+                    <Slider className="slider-wrapper" duration="500" infinite={true} onSlideChange={event => console.log(event)}>
                         {content.map((item, index) => (
                             <div
                                 key={index}
                                 className={index !== 0 ? "slider-content double" : "slider-content single" }
                             >
+                                <ScrollAnimation animateIn="fadeInLeft">
+                                    <div className="image">
+                                        <img src={item.image} alt="" />
+                                    </div>
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeInRight">
+                                    <div className="animation">
+                                        <img src={item.animation} alt="" />
+                                    </div>
+                                </ScrollAnimation>
                                 <div className="inner">
                                     <ScrollAnimation animateIn="fadeInDown">
                                         <div className="title">
@@ -60,15 +70,6 @@ class Home extends Component {
                                         <p>{item.description}</p>
                                     </ScrollAnimation>
                                 </div>
-                                <div className="animation">
-                                    <img src={item.animation} alt="" />
-                                    <div id="bm"></div>
-                                </div>
-                                <ScrollAnimation animateIn="fadeInLeft">
-                                    <div className="image">
-                                        <img src={item.image} alt="" />
-                                    </div>
-                                </ScrollAnimation>
                             </div>
                         ))}
                     </Slider>
@@ -177,11 +178,11 @@ class Home extends Component {
                         </ScrollAnimation>
                         <ScrollAnimation animateIn="fadeInUp" delay={200}>
                             <div className="">
-                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-facebook.svg')} className="social-icon" alt="" /></a>
-                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-twitter.svg')} className="social-icon" alt="" /></a>
-                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-linkedin.svg')} className="social-icon" alt="" /></a>
-                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-instagram.svg')} className="social-icon" alt="" /></a>
-                                <a rel="noopener noreferrer" href="#" target="_blank"><img src={require('../images/social-icon-g+.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-facebook.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-twitter.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-linkedin.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-instagram.svg')} className="social-icon" alt="" /></a>
+                                <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-g+.svg')} className="social-icon" alt="" /></a>
                             </div>
                         </ScrollAnimation>
                     </div>
