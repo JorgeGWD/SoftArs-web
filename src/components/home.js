@@ -12,14 +12,14 @@ const content = [
         image: 'http://softars.com/static/media/title-dialog.svg',
     },
     {
-        title: 'Mobile dev',
+        title: 'Mobile first',
         description:
-            'We like to develope accesible software with user-center design. You’ll be able to reach anyone, anywhere.',
+            'We like to develop accesible software with user-center design. You’ll be able to reach anyone, anywhere.',
         image: 'http://softars.com/static/media/services-mobile.png',
         animation: 'http://softars.com/static/media/slider-mobile.svg',
     },
     {
-        title: 'Desktop design',
+        title: 'Web design',
         description:
             'We build a screen friendly experience. Navegate freely with a beautiful and highly functional design aimed at your needs.',
         image: 'http://softars.com/static/media/services-desktop.png',
@@ -86,7 +86,7 @@ class Home extends Component {
                                         </div>
                                     </ScrollAnimation>
                                     <ScrollAnimation animateIn="fadeInUp">
-                                        <p>We use technology that allows us to develope whatever you have in mind.</p>
+                                        <p>We use technology that allows us to develop whatever you have in mind.</p>
                                     </ScrollAnimation>
                                 </div>
                             </div>
@@ -182,7 +182,6 @@ class Home extends Component {
                                 <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-twitter.svg')} className="social-icon" alt="" /></a>
                                 <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-linkedin.svg')} className="social-icon" alt="" /></a>
                                 <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-instagram.svg')} className="social-icon" alt="" /></a>
-                                <a rel="noopener noreferrer" href="jsx-a11y/href-no-hash" target="_blank"><img src={require('../images/social-icon-g+.svg')} className="social-icon" alt="" /></a>
                             </div>
                         </ScrollAnimation>
                     </div>
