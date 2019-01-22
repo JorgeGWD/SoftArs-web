@@ -23,7 +23,7 @@
 .slider-wrapper
     margin: 0px auto
     position: relative
-    width: 80%
+    width: 90%
     height: 70vh
     overflow: hidden
 
@@ -68,21 +68,27 @@
 .animation
     grid-area: animation
     img
-        float: right
+        //float: right
         position: relative
         top: 100px
-        margin-right: 50px
-        width: 400px
+        //margin-right: 50px
+        width: 42vh
         height: auto
         
 .slide.double:nth-child(even)
     .animation
         img
-            width: 250px
-            height: auto
+            width: auto
+            height: 45vh
+    .image
+        img
+            margin-left: 50px
 
 .image
     grid-area: image
+    img
+        width: auto
+        height: 50vh
 
 .previousButton, .nextButton
     position: absolute
@@ -124,21 +130,51 @@
     -webkit-transform: translate(-50%, -50%)
     transform: translate(-50%, -50%)
 
-@media (max-width: 1024px)
+@media (max-width: 1600px)
+    .sliderbox
+        .image img
+            bottom: 0px
+            //left: -100px
+
+@media (max-width: 1300px)
     .slider-wrapper
-        width: 95%
+        width: 100%
     .slide.single
         p
             width: 100%
-
-@media (max-width: 800px)
-    .sliderbox
-        img
-            bottom: 0px
-            left: -100px
     .slide.double
-        display: grid
-        grid-template-areas: 'image animation inner inner inner'
+        grid-template-columns: 1fr 2fr 2fr
+        .image
+            img
+                margin-left: -50px
+
+    .slide.double:nth-child(even)
+        .image
+            img
+                margin-left: 0px
+
+@media (max-width: 950px)
+    .slide.double
+        grid-template-areas: 'animation'
+        grid-template-columns: 1fr
+        .image
+            display: none
+        .animation
+            img
+                top: -100px
+        .inner
+            top: 350px
+            padding: 4vh
+            text-align: center
+            p
+                margin: 0px auto
+                max-width: 80%
+        
+    .slide.double:nth-child(even)
+        .animation
+            img
+                top: -100px
+                height: 35vh
 
 @media (max-height: 500px)
     .slider-wrapper, .slide
@@ -146,7 +182,7 @@
       
 @media (max-width: 640px)
     .slider-wrapper, .slide
-        height: calc(80vh - 75px)
+        height: calc(82vh - 75px)
 
 @media (max-height: 600px)
     .slider-content .inner h1
