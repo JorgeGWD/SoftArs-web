@@ -58,9 +58,12 @@ class TextFields extends React.Component {
             <div className="contact">
                 <div className="inbox">
                     <input type="checkbox" name="" id="icon"/>
-                    <label htmlFor="icon" className="icon"><img src={require('../images/icon-chat-bubble.svg')} className="softars-icon" alt="" /></label>
+                    <label htmlFor="icon" className="icon">
+                        <img src={require('../images/icon-chat-bubble.svg')} className="email-icon" alt="" />
+                    </label>
                     <div className="box">
                         <p><span>Hello, we’d love to hear your ideas</span> <br/> Let us know how can we help</p>
+                        <img src={require('../images/times.svg')} className="close-icon" alt="" />
                         <form className={classes.container} noValidate autoComplete="off">
                             <TextField
                                 id="name"
@@ -74,7 +77,7 @@ class TextFields extends React.Component {
                                 id="country"
                                 label="Country"
                                 className={classes.textField}
-                                value={this.state.name}
+                                value={this.state.country}
                                 onChange={this.handleChange('country')}
                                 margin="normal"
                             />
@@ -82,7 +85,7 @@ class TextFields extends React.Component {
                                 id="email"
                                 label="Your email"
                                 className={classes.textField}
-                                value={this.state.name}
+                                value={this.state.email}
                                 onChange={this.handleChange('email')}
                                 margin="normal"
                             />

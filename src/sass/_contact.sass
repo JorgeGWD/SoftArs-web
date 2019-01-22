@@ -1,18 +1,25 @@
 .contact
     position: fixed
-    right: 0px
-    bottom: 0px
-    z-index: 10
+    //right: 50px
+    right: 2.5%
+    bottom: -450px
+    width: 450px
+    z-index: 10000000
     label.icon
-        z-index: 1000000
+        z-index: 10000000
         position: absolute
-        right: 50px
-        bottom: 20px
+        right: 0px
+        bottom: 465px
         transition: .5s ease
         img
-            width: 80px
-            height: auto
+            position: absolute
             cursor: pointer
+            &.email-icon
+                right: 0px
+                bottom: 0px
+                width: 80px
+                height: auto
+                transition: .5s ease
 
 .inbox
     z-index: 100
@@ -22,10 +29,10 @@ input
     display: none
 
 .box
-    position: absolute
+    position: relative
     /*text-align: right*/
-    right: 50px
-    bottom: -650px
+    right: 0px
+    bottom: 0px
     opacity: 0
     box-shadow: 3px 3px 15px rgba(0,0,0,.3)
     transition: .5s ease
@@ -40,9 +47,16 @@ input
             margin-bottom: 10px
             font-size: 18px
             font-weight: bold
+    img.close-icon
+        position: absolute
+        top: 15px
+        right: 15px
+        width: 20px
+        height: auto
+        transition: .5s ease
     form
-        padding: 0px 50px 30px 50px
-        width: 300px
+        padding: 0px 5vh 30px 5vh
+        //width: 300px
         background-color: #fff
     button
         padding: 15px
@@ -91,14 +105,15 @@ input
         cursor: pointer
 
 input#icon:checked~.box
-    bottom: 0px
+    bottom: 450px
     opacity: 1
     transition: .5s ease
 
 input#icon:checked~label
-    bottom: 420px
-    opacity: 0
-    transition: .5s ease
+    img.email-icon
+        bottom: 420px
+        opacity: 0
+        transition: .5s ease
 
 .confirmation
     z-index: 10
@@ -126,3 +141,7 @@ input#icon:checked~label
         border: none
         background-color: #03AFF5
         cursor: pointer
+
+@media (max-width: 850px)
+    .contact
+        width: 95%

@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.00cf8852.css",
-  "main.css.map": "static/css/main.00cf8852.css.map",
-  "main.js": "static/js/main.af9eb1aa.js",
-  "main.js.map": "static/js/main.af9eb1aa.js.map",
+  "main.css": "static/css/main.3963d578.css",
+  "main.css.map": "static/css/main.3963d578.css.map",
+  "main.js": "static/js/main.417f9305.js",
+  "main.js.map": "static/js/main.417f9305.js.map",
   "static\\media\\arrow.svg": "static/media/arrow.c9c311e0.svg",
   "static\\media\\bg-home-softars.png": "static/media/bg-home-softars.92c1669b.png",
   "static\\media\\brand-icon-angular.svg": "static/media/brand-icon-angular.5a7fab35.svg",
@@ -24,6 +24,7 @@
   "static\\media\\social-icon-linkedin.svg": "static/media/social-icon-linkedin.a212aeb0.svg",
   "static\\media\\social-icon-twitter.svg": "static/media/social-icon-twitter.1cc975a6.svg",
   "static\\media\\team.png": "static/media/team.64626019.png",
+  "static\\media\\times.svg": "static/media/times.fe210022.svg",
   "static\\media\\title-icon-gamedev.svg": "static/media/title-icon-gamedev.b6fa7a30.svg",
   "static\\media\\title-icon-system.svg": "static/media/title-icon-system.0c466d94.svg"
 }
