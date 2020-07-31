@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
-class footer extends Component {
+class Footer extends Component {
+    getYear() {
+        return new Date().getFullYear();
+    }
+
     render() {
         return (
             <div className="footer">
-
+                <p>SoftArs &copy; {new Date().getFullYear()}</p>
             </div>
         );
     }
 }
 
-export default footer;
+export default Footer;
