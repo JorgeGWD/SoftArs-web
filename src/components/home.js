@@ -9,21 +9,21 @@ const content = [
         title: 'Let’s talk about it',
         description:
             'Our team is ready to advise you in your project’s development. We’ll find the best way to balance technology, eficiency and design.',
-        image: 'http://softars.com/static/media/title-dialog.svg',
+        //image: 'http://softars.com/static/media/title-dialog.svg',
     },
     {
         title: 'Mobile first',
         description:
             'We like to develop accesible software with user-center design. You’ll be able to reach anyone, anywhere.',
-        image: 'http://softars.com/static/media/services-mobile.png',
-        animation: 'http://softars.com/static/media/slider-mobile.svg',
+        //image: 'http://softars.com/static/media/services-mobile.png',
+        //animation: 'http://softars.com/static/media/slider-mobile.svg',
     },
     {
         title: 'Web design',
         description:
             'We build a screen friendly experience. Navegate freely with a beautiful and highly functional design aimed at your needs.',
-        image: 'http://softars.com/static/media/services-desktop.png',
-        animation: 'http://softars.com/static/media/slider-desktop.svg',
+        //image: 'http://softars.com/static/media/services-desktop.png',
+        //animation: 'http://softars.com/static/media/slider-desktop.svg',
     }
 ];
 
