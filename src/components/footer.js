@@ -4,7 +4,6 @@ class Footer extends Component {
     getYear() {
         return new Date().getFullYear();
     }
-
     render() {
         return (
             <div className="footer">

@@ -38,11 +38,11 @@ class TextFields extends React.Component {
                 <div className="inbox">
                     <input type="checkbox" name="" id="icon"/>
                     <label htmlFor="icon" className="icon">
-                        <img src={require('../images/icon-chat-bubble.svg')} className="email-icon" alt="" />
+                        <img src={require('../images/icon-chat-bubble.svg')} className="email-icon" alt="Email" />
                     </label>
                     <div className="box">
                         <p><span>Hello, we’d love to hear your ideas</span> <br/> Let us know how can we help</p>
-                        <img src={require('../images/times.svg')} className="close-icon" alt="" />
+                        <img src={require('../images/times.svg')} className="close-icon" alt="Close" />
                         <form className={classes.container} noValidate autoComplete="off">
                             <TextField
                                 id="name"

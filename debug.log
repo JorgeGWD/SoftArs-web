@@ -64,3 +64,5 @@
 [0729/230314.870:ERROR:crash_report_database_win.cc(428)] unexpected header
 [0729/231814.880:ERROR:crash_report_database_win.cc(428)] unexpected header
 [0731/101554.654:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0903/105134.245:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0903/105134.325:ERROR:crash_report_database_win.cc(469)] failed to stat report

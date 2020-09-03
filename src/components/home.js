@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
+import titleDialog from '../images/title-icon-dialog.svg';
+import servicesMobile from '../images/services-mobile.png';
+import mobileAnimation from '../images/slider-mobile.svg';
+import servicesDesktop from '../images/services-desktop.png';
+import desktopAnimation from '../images/slider-desktop.svg';
 import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -9,21 +14,21 @@ const content = [
         title: 'Let’s talk about it',
         description:
             'Our team is ready to advise you in your project’s development. We’ll find the best way to balance technology, eficiency and design.',
-        //image: 'http://softars.com/static/media/title-dialog.svg',
+        image: titleDialog,
     },
     {
         title: 'Mobile first',
         description:
             'We like to develop accesible software with user-center design. You’ll be able to reach anyone, anywhere.',
-        //image: 'http://softars.com/static/media/services-mobile.png',
-        //animation: 'http://softars.com/static/media/slider-mobile.svg',
+        image: servicesMobile,
+        animation: mobileAnimation,
     },
     {
         title: 'Web design',
         description:
             'We build a screen friendly experience. Navegate freely with a beautiful and highly functional design aimed at your needs.',
-        //image: 'http://softars.com/static/media/services-desktop.png',
-        //animation: 'http://softars.com/static/media/slider-desktop.svg',
+        image: servicesDesktop,
+        animation: desktopAnimation,
     }
 ];
 
