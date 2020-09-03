@@ -53,8 +53,12 @@ const slider = () => {
                         <div className="inner">
                             <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
                                 <div className="title">
-                                    <img className="softars-icon" src={item.image} alt="" />
-                                    <h1>{item.title}</h1>
+                                    <div>
+                                        <img className="softars-icon" src={item.image} alt="" />
+                                    </div>
+                                    <div>
+                                        <h1>{item.title}</h1>
+                                    </div>
                                 </div>
                             </ScrollAnimation>
                             <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
