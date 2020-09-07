@@ -26,7 +26,20 @@
     position: relative
 
 input
-    display: none
+    display: block
+    padding: 10px
+    width: calc( 100% - 20px )
+    margin: 10px 0px
+    border: none
+    border-bottom: 1px solid #000
+    transition: .5s ease
+    &:hover
+        border-bottom: 2px solid #03AFF5
+        transition: .5s ease
+    &:focus
+        outline: none
+        border-bottom: 2px solid #03AFF5
+        transition: .5s ease
 
 .box
     position: relative
@@ -55,7 +68,7 @@ input
         height: auto
         transition: .5s ease
     form
-        padding: 0px 5vh 30px 5vh
+        padding: 30px
         //width: 300px
         background-color: #fff
     button
@@ -66,42 +79,6 @@ input
         font-weight: lighter
         border: none
         background-color: #03AFF5
-        cursor: pointer
-
-.TextFields-textField-2, .jss2
-    width: 100% !important
-
-.wrap
-    position: relative
-    label
-        display: block
-        margin-top: 15px
-        letter-spacing: 2px
-    input, select, textarea
-        width: calc(100% - 2px)
-        max-width: calc(100% - 2px)
-        min-width: calc(100% - 2px)
-        padding: 10px 0px 10px 5px
-        border: none
-        &:focus
-            outline: none
-    textarea
-        min-height: 150px
-    span.focus
-        position: absolute
-        bottom: 0px
-        left: 0px
-        width: 100%
-        border-bottom: 1px solid gray
-
-.submit-area
-    input
-        margin-top: 20px
-        padding: 15px
-        width: 100%
-        color: #fff
-        background-color: #03AFF5
-        border: none
         cursor: pointer
 
 input#icon:checked~.box
