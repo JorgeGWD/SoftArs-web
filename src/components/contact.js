@@ -2,10 +2,17 @@ import React, { useState } from 'react'
 
 const Contact = () => {
 
+    const [ data, setData ] = useState()
+
     const [ open, setOpen ] = useState(false)
  
-    const handleChange = () => {
+    const handleChange = (e) => {
+        console.log(e.target.value)
 
+        setData({
+            ...data,
+            [e.target.name] : e.target.value
+        })
     }
 
     return (
@@ -18,31 +25,42 @@ const Contact = () => {
                     <p><span>Hello, we’d love to hear your ideas</span> <br/> Let us know how can we help</p>
                     <img src={require('../images/times.svg')} className="close-icon" alt="Close" onClick={() => { setOpen(!open); }} />
                     <form noValidate autoComplete="off">
-                        <input
-                            id="name"
-                            label="Enterprise"
-                            name="name"
-                            onChange={handleChange}
-                        />
-                        <input
-                            id="country"
-                            label="Country"
-                            name="country"
-                            onChange={handleChange}
-                        />
-                        <input
-                            id="email"
-                            label="Your email"
-                            name="email"
-                            onChange={handleChange}
-                        />
-                        <textarea
-                            id="multiline-static"
-                            label="Your message"
-                            rows="4"
-                            defaultValue=""
-                            onChange={handleChange}
-                        />
+                        <div className="form-data">
+                            <input
+                                id="name"
+                                type="text"
+                                label="Enterprise"
+                                name="name"
+                                placeholder=" "
+                                onChange={handleChange}
+                            />
+                            <label htmlFor="name">Enterprise</label>
+                            <input
+                                id="country"
+                                type="text"
+                                label="Country"
+                                name="country"
+                                placeholder=" "
+                                onChange={handleChange}
+                            />
+                            <label htmlFor="country">Country</label>
+                            <input
+                                id="email"
+                                type="email"
+                                label="Your email"
+                                name="email"
+                                placeholder=" "
+                                onChange={handleChange}
+                            />
+                            <label htmlFor="email">Your email</label>
+                            <textarea
+                                id="multiline-static"
+                                label="Your message"
+                                rows="4"
+                                defaultValue=""
+                                onChange={handleChange}
+                            />
+                        </div>
                         <button className="submit" type="submit">Send</button>
                     </form>
                 </div>

@@ -811,7 +811,7 @@ input {
   width: calc( 100% - 20px);
   margin: 10px 0px;
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #c4c4c4;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
@@ -829,11 +829,39 @@ input:focus {
   transition: .5s ease;
 }
 
+textarea {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+textarea:hover {
+  border-bottom: 2px solid #03AFF5;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #03AFF5;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
 .box {
   position: relative;
   /*text-align: right*/
   right: 0px;
   bottom: 450px;
+  font-family: Arial, Helvetica, sans-serif;
   opacity: 1;
   -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
@@ -866,8 +894,32 @@ input:focus {
 }
 
 .box form {
-  padding: 30px;
   background-color: #fff;
+}
+
+.box form .form-data {
+  padding: 30px;
+}
+
+.box form .form-data input:not(:placeholder-shown) + label {
+  top: -60px;
+  font-size: 12px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.box form .form-data input:focus + label {
+  top: -60px;
+  color: #03AFF5;
+}
+
+.box form .form-data label {
+  position: relative;
+  top: -40px;
+  color: gray;
+  font-size: 14px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .box button {
