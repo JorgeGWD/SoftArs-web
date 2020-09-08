@@ -7,7 +7,7 @@ const Home = () => {
         <div className="home">
             <div className="main">
                 <div className="text-center">
-                    <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+                    <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
                         <h1>Coding the <strong>future</strong></h1>
                         <h2>Connect with the online business</h2>
                     </ScrollAnimation>

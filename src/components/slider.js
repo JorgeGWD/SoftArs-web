@@ -40,18 +40,18 @@ const slider = () => {
                         key={index}
                         className={index !== 0 ? "slider-content double" : "slider-content single" }
                     >
-                        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true}>
+                        <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce={true}>
                             <div className="image">
                                 <img src={item.image} alt="" />
                             </div>
                         </ScrollAnimation>
-                        <ScrollAnimation animateIn="fadeInRight" animateOnce={true}>
+                        <ScrollAnimation animateIn="animate__fadeInRight" animateOnce={true}>
                             <div className="animation">
                                 <img src={item.animation} alt="" />
                             </div>
                         </ScrollAnimation>
                         <div className="inner">
-                            <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
+                            <ScrollAnimation animateIn="animate__fadeInDown" animateOnce={true}>
                                 <div className="title">
                                     <div>
                                         <img className="softars-icon" src={item.image} alt="" />
@@ -61,7 +61,7 @@ const slider = () => {
                                     </div>
                                 </div>
                             </ScrollAnimation>
-                            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+                            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
                                 <p>{item.description}</p>
                             </ScrollAnimation>
                         </div>
