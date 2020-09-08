@@ -61,6 +61,8 @@
     grid-template-columns: 1fr 1fr 1fr
     .inner
         padding: 0px
+        width: 80%
+        left: 40%
         text-align: left
         align-self: baseline
         .title
@@ -91,13 +93,14 @@
             height: 45vh
     .image
         img
-            margin-left: 50px
+            // margin-left: 50px
 
 .image
     grid-area: image
     img
         width: auto
-        height: 50vh
+        height: 60vh
+        transform: translateX(35%) !important
 
 .previousButton, .nextButton
     position: absolute
@@ -142,8 +145,8 @@
 @media (max-width: 1600px)
     .sliderbox
         .image img
-            bottom: 0px
-            //left: -100px
+            // bottom: 0px
+            // left: -100px
 
 @media (max-width: 1300px)
     .slider-wrapper
@@ -174,6 +177,8 @@
                 transform: translateY(-45%)
         .inner
             // top: 350px
+            width: 100%
+            left: 50%
             padding: 4vh
             text-align: center
             p
