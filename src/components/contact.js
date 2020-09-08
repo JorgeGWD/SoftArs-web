@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+
+    const [ open, setOpen ] = useState(false)
  
     const handleChange = () => {
 
@@ -9,13 +11,12 @@ const Contact = () => {
     return (
         <div className="contact">
             <div className="inbox">
-                <input type="checkbox" name="" id="icon"/>
-                <label htmlFor="icon" className="icon">
-                    <img src={require('../images/icon-chat-bubble.svg')} className="email-icon" alt="Email" />
+                <label htmlFor="icon" className="icon" onClick={() => { setOpen(!open); }}>
+                    <img src={require('../images/icon-chat-bubble.svg')} className={open ? "email-icon hide" : "email-icon"} alt="Email" />
                 </label>
-                <div className="box">
+                <div className={open ? "box" : "box hide"}>
                     <p><span>Hello, we’d love to hear your ideas</span> <br/> Let us know how can we help</p>
-                    <img src={require('../images/times.svg')} className="close-icon" alt="Close" />
+                    <img src={require('../images/times.svg')} className="close-icon" alt="Close" onClick={() => { setOpen(!open); }} />
                     <form noValidate autoComplete="off">
                         <input
                             id="name"
@@ -42,8 +43,8 @@ const Contact = () => {
                             defaultValue=""
                             onChange={handleChange}
                         />
+                        <button className="submit" type="submit">Send</button>
                     </form>
-                    <button className="send">Send</button>
                 </div>
             </div>
             <div className="confirmation">

@@ -19,7 +19,12 @@
                 bottom: 0px
                 width: 80px
                 height: auto
+                opacity: 1
                 transition: .5s ease
+                &.hide
+                    bottom: 400px
+                    opacity: 0
+                    transition: .5s ease
 
 .inbox
     z-index: 100
@@ -45,8 +50,8 @@ input
     position: relative
     /*text-align: right*/
     right: 0px
-    bottom: 0px
-    opacity: 0
+    bottom: 450px
+    opacity: 1
     box-shadow: 3px 3px 15px rgba(0,0,0,.3)
     transition: .5s ease
     p
@@ -66,7 +71,7 @@ input
         right: 15px
         width: 20px
         height: auto
-        transition: .5s ease
+        cursor: pointer
     form
         padding: 30px
         //width: 300px
@@ -80,16 +85,11 @@ input
         border: none
         background-color: #03AFF5
         cursor: pointer
-
-input#icon:checked~.box
-    bottom: 450px
-    opacity: 1
-    transition: .5s ease
-
-input#icon:checked~label
-    img.email-icon
-        bottom: 420px
+    &.hide
+        right: 0px
+        bottom: 0px
         opacity: 0
+        box-shadow: 3px 3px 15px rgba(0,0,0,.3)
         transition: .5s ease
 
 .confirmation
