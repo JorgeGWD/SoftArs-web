@@ -164,13 +164,14 @@
 
 @media (max-width: 950px)
     .slide.double
-        grid-template-areas: 'animation'
-        grid-template-columns: 1fr
+        grid-template-areas: none
+        grid-template-columns: none
+        grid-template-rows: 1fr 1fr
         .image
             display: none
         .animation
             img
-                top: -50%
+                transform: translateY(-45%)
         .inner
             // top: 350px
             padding: 4vh

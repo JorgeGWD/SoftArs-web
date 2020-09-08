@@ -699,15 +699,18 @@ p {
 
 @media (max-width: 950px) {
   .slide.double {
-        grid-template-areas: 'animation';
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+        grid-template-areas: none;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
   }
   .slide.double .image {
     display: none;
   }
   .slide.double .animation img {
-    top: -50%;
+    -webkit-transform: translateY(-45%);
+            transform: translateY(-45%);
   }
   .slide.double .inner {
     padding: 4vh;
