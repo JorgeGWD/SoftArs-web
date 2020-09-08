@@ -149,6 +149,9 @@ p
                 width: 100%
                 display: grid
                 grid-template-columns: auto auto auto
+        .title
+            img
+                margin: 0px
 
 .videogame
     z-index: 0
@@ -172,6 +175,18 @@ p
                 /*margin: -20px 65px*/
                 max-width: 60%
                 height: auto
+
+@media (max-width: 863px)
+    .videogame
+        .inerbox
+            p
+                text-align: center
+        .title
+            text-align: center
+            h1
+                float: none
+            img
+                margin: 0px
 
 @media (max-width: 1024px)
     .videogame

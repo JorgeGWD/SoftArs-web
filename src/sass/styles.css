@@ -289,6 +289,9 @@ p {
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
   }
+  .technology .title img {
+    margin: 0px;
+  }
 }
 
 .videogame {
@@ -329,6 +332,21 @@ p {
   /*margin: -20px 65px*/
   max-width: 60%;
   height: auto;
+}
+
+@media (max-width: 863px) {
+  .videogame .inerbox p {
+    text-align: center;
+  }
+  .videogame .title {
+    text-align: center;
+  }
+  .videogame .title h1 {
+    float: none;
+  }
+  .videogame .title img {
+    margin: 0px;
+  }
 }
 
 @media (max-width: 1024px) {
