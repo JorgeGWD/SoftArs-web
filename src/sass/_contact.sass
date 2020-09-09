@@ -30,29 +30,13 @@
     z-index: 100
     position: relative
 
-input
-    display: block
-    padding: 10px
-    width: calc( 100% - 20px )
-    margin: 10px 0px
-    border: none
-    border-bottom: 2px solid #c4c4c4
-    transition: .5s ease
-    &:hover
-        border-bottom: 2px solid #03AFF5
-        transition: .5s ease
-    &:focus
-        outline: none
-        border-bottom: 2px solid #03AFF5
-        transition: .5s ease
-
 textarea
     display: block
     padding: 10px
     width: 100%
     box-sizing: border-box
     resize: none
-    margin: 10px 0px
+    // margin: 10px 0px
     border: none
     border-bottom: 2px solid #c4c4c4
     transition: .5s ease
@@ -97,9 +81,24 @@ textarea
         .form-data
             padding: 30px
             input
+                display: block
+                padding: 10px
+                width: calc( 100% - 20px )
+                margin: 5px 0px
+                border: none
+                border-bottom: 2px solid #c4c4c4
+                transition: .5s ease
+                &:hover
+                    border-bottom: 2px solid #03AFF5
+                    transition: .5s ease
+                &:focus
+                    outline: none
+                    border-bottom: 2px solid #03AFF5
+                    transition: .5s ease
                 &:focus + label
                     top: -60px
                     color: #03AFF5
+                    font-size: 12px
                 &:not(:placeholder-shown) + label
                     top: -60px
                     font-size: 12px

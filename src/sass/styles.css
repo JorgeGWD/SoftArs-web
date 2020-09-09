@@ -805,30 +805,6 @@ p {
   position: relative;
 }
 
-input {
-  display: block;
-  padding: 10px;
-  width: calc( 100% - 20px);
-  margin: 10px 0px;
-  border: none;
-  border-bottom: 2px solid #c4c4c4;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-input:hover {
-  border-bottom: 2px solid #03AFF5;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-input:focus {
-  outline: none;
-  border-bottom: 2px solid #03AFF5;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
 textarea {
   display: block;
   padding: 10px;
@@ -836,7 +812,6 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   resize: none;
-  margin: 10px 0px;
   border: none;
   border-bottom: 2px solid #c4c4c4;
   -webkit-transition: .5s ease;
@@ -901,9 +876,34 @@ textarea:focus {
   padding: 30px;
 }
 
+.box form .form-data input {
+  display: block;
+  padding: 10px;
+  width: calc( 100% - 20px);
+  margin: 5px 0px;
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.box form .form-data input:hover {
+  border-bottom: 2px solid #03AFF5;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.box form .form-data input:focus {
+  outline: none;
+  border-bottom: 2px solid #03AFF5;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
 .box form .form-data input:focus + label {
   top: -60px;
   color: #03AFF5;
+  font-size: 12px;
 }
 
 .box form .form-data input:not(:placeholder-shown) + label {
