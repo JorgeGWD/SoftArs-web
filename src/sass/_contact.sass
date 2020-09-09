@@ -97,19 +97,26 @@ textarea
         .form-data
             padding: 30px
             input
+                &:focus + label
+                    top: -60px
+                    color: #03AFF5
                 &:not(:placeholder-shown) + label
                     top: -60px
                     font-size: 12px
                     transition: .25s ease
-                &:focus + label
-                    top: -60px
-                    color: #03AFF5
             label
                 position: relative
                 top: -40px
                 color: gray
                 font-size: 14px
                 transition: .25s ease
+            p
+                position: relative
+                top: -20px
+                padding: 0px
+                background-color: transparent
+                color: red
+                font-size: 12px
     button
         padding: 15px
         width: 100%
@@ -119,6 +126,8 @@ textarea
         border: none
         background-color: #03AFF5
         cursor: pointer
+        &:focus
+            outline: none
     &.hide
         right: 0px
         bottom: 0px

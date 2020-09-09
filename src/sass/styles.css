@@ -901,16 +901,16 @@ textarea:focus {
   padding: 30px;
 }
 
+.box form .form-data input:focus + label {
+  top: -60px;
+  color: #03AFF5;
+}
+
 .box form .form-data input:not(:placeholder-shown) + label {
   top: -60px;
   font-size: 12px;
   -webkit-transition: .25s ease;
   transition: .25s ease;
-}
-
-.box form .form-data input:focus + label {
-  top: -60px;
-  color: #03AFF5;
 }
 
 .box form .form-data label {
@@ -922,6 +922,15 @@ textarea:focus {
   transition: .25s ease;
 }
 
+.box form .form-data p {
+  position: relative;
+  top: -20px;
+  padding: 0px;
+  background-color: transparent;
+  color: red;
+  font-size: 12px;
+}
+
 .box button {
   padding: 15px;
   width: 100%;
@@ -931,6 +940,10 @@ textarea:focus {
   border: none;
   background-color: #03AFF5;
   cursor: pointer;
+}
+
+.box button:focus {
+  outline: none;
 }
 
 .box.hide {

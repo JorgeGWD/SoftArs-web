@@ -1,10 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Contact = () => {
 
-    const [ data, setData ] = useState()
+    const [ data, setData ] = useState({
+        name: '',
+        country: '',
+        email: '',
+        message: ''
+    })
 
     const [ open, setOpen ] = useState(false)
+
+    const [ errors, setErrors ] = useState({})
+
+    const [ isSubmitting, setIsSubmitting] = useState(false)
  
     const handleChange = (e) => {
         // console.log(e.target.value)
@@ -15,10 +24,38 @@ const Contact = () => {
         })
     }
 
+    const validateInfo = (data) => {
+        let errors = {}
+    
+        if(!data.name.trim()) {
+            errors.name = "Este campo es requerido"
+        }
+    
+        if(!data.country) {
+            errors.country = "Este campo es requerido"
+        }
+
+        if(!data.email) {
+            errors.email = "Este campo es requerido"
+        } else if(!/\S+@\S+\.\S+/.test(data.email)) {
+            errors.email = "Email invalido"
+        }
+        
+        return errors;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(data);
+
+        setErrors(validateInfo(data))
+        setIsSubmitting(true)
     }
+
+    useEffect(() => {
+        if(Object.keys(errors).length === 0 && isSubmitting) {
+            console.log(data)
+        }
+    }, [errors])
 
     return (
         <div className="contact">
@@ -38,8 +75,10 @@ const Contact = () => {
                                 name="name"
                                 placeholder=" "
                                 onChange={handleChange}
+                                required
                             />
                             <label htmlFor="name">Enterprise</label>
+                            {errors.name && <p>{errors.name}</p>}
                             <input
                                 id="country"
                                 type="text"
@@ -47,8 +86,10 @@ const Contact = () => {
                                 name="country"
                                 placeholder=" "
                                 onChange={handleChange}
+                                required
                             />
                             <label htmlFor="country">Country</label>
+                            {errors.country && <p>{errors.country}</p>}
                             <input
                                 id="email"
                                 type="email"
@@ -56,8 +97,10 @@ const Contact = () => {
                                 name="email"
                                 placeholder=" "
                                 onChange={handleChange}
+                                required
                             />
                             <label htmlFor="email">Your email</label>
+                            {errors.email && <p>{errors.email}</p>}
                             <textarea
                                 id="message"
                                 label="Your message"
@@ -65,6 +108,7 @@ const Contact = () => {
                                 rows="4"
                                 defaultValue=""
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <button className="submit" type="submit">Send</button>
