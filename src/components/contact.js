@@ -54,7 +54,7 @@ const Contact = () => {
         if(!data.name || !data.country || !data.email || !data.message) {
             setErrors(validateInfo(data))
 
-            console.log('Error')
+            // console.log('Error')
             
         } else {
             setErrors(validateInfo(data))
@@ -141,9 +141,11 @@ const Contact = () => {
                 </div>
             </div>
             <div className={isSubmitting ? "confirmation active" : "confirmation"}>
-                <h2>Great!</h2>
-                <p>Thank you for contacting us <br/>You’ll hear from us soon enough</p>
-                <button className="send" onClick={() => { setIsSubmitting(!isSubmitting) }}>Okay</button>
+                <div className="confirmation-content">
+                    <h2>Great!</h2>
+                    <p>Thank you for contacting us <br/>You’ll hear from us soon enough</p>
+                    <button className="send" onClick={() => { setIsSubmitting(!isSubmitting) }}>Okay</button>
+                </div>
             </div>
         </div>
     )

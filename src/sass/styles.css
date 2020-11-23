@@ -962,9 +962,8 @@ textarea:focus {
 .confirmation {
   z-index: 100;
   position: fixed;
-  right: 40px;
+  right: 2.5%;
   bottom: -350px;
-  padding: 50px;
   width: 300px;
   text-align: center;
   background-color: #fff;
@@ -1000,8 +999,12 @@ textarea:focus {
   cursor: pointer;
 }
 
-@media (max-width: 850px) {
-  .contact {
+.confirmation .confirmation-content {
+  padding: 50px;
+}
+
+@media (max-width: 650px) {
+  .contact, .confirmation {
     width: 95%;
   }
 }
