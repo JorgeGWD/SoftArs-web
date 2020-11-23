@@ -186,12 +186,10 @@ p {
 
 .main .screen {
   position: relative;
-  /* width: 100%*/
-  top: 12vh;
   margin: 0px auto;
-  /*top: 35%*/
+  top: 12%;
   width: 40%;
-  min-width: 300px;
+  min-width: 400px;
 }
 
 .main .screen img {
@@ -350,12 +348,13 @@ p {
 }
 
 @media (max-width: 1024px) {
+  .main .screen {
+    top: 8%;
+  }
   .videogame {
     height: 100%;
   }
   .videogame ul.engines {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
   }
@@ -466,13 +465,15 @@ p {
   .videogame .title h1, .videogame p h1 {
     float: none;
   }
-  .videogame .engines {
-    display: -ms-grid;
-    display: grid;
+  .videogame ul.engines {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
   }
-  .videogame .engines li img {
+  .videogame ul.engines li.unreal, .videogame ul.engines li.godot {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .videogame ul.engines li img {
     padding: -40px 0px;
     max-width: 80%;
   }
@@ -712,8 +713,8 @@ p {
         grid-template-areas: none;
     -ms-grid-columns: none;
         grid-template-columns: none;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
   }
   .slide.double .image {
     display: none;

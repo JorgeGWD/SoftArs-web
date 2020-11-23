@@ -71,12 +71,12 @@ p
         text-shadow: 2px 2px 5px rgba(0,0,0,.5)
     .screen
         position: relative
-        /* width: 100%*/
-        top: 12vh
+        // width: 100%
+        // top: 12vh
         margin: 0px auto
-        /*top: 35%*/
+        top: 12%
         width: 40%
-        min-width: 300px
+        min-width: 400px
         img
             width: 100%
 
@@ -189,10 +189,12 @@ p
                 margin: 0px
 
 @media (max-width: 1024px)
+    .main
+        .screen
+            top: 8%
     .videogame
         height: 100%
         ul.engines
-            display: grid
             grid-template-columns: auto auto auto
             li.unreal, li.godot
                 transform: translateX(50%)
@@ -269,9 +271,10 @@ p
             text-align: center
             h1
                 float: none
-        .engines
-            display: grid
+        ul.engines
             grid-template-columns: auto auto
+            li.unreal, li.godot
+                transform: translateX(0%)
             li
                 img
                     padding: -40px 0px
