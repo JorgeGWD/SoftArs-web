@@ -13,7 +13,7 @@ const Contact = () => {
 
     const [ errors, setErrors ] = useState({})
 
-    const [ isSubmitting, setIsSubmitting] = useState(false)
+    const [ isSubmitting, setIsSubmitting ] = useState(false)
  
     const handleChange = (e) => {
         // console.log(e.target.value)
@@ -28,17 +28,21 @@ const Contact = () => {
         let errors = {}
     
         if(!data.name.trim()) {
-            errors.name = "Este campo es requerido"
+            errors.name = "This field is required"
         }
     
         if(!data.country) {
-            errors.country = "Este campo es requerido"
+            errors.country = "This field is required"
         }
 
         if(!data.email) {
-            errors.email = "Este campo es requerido"
+            errors.email = "This field is required"
         } else if(!/\S+@\S+\.\S+/.test(data.email)) {
-            errors.email = "Email invalido"
+            errors.email = "Invalid email"
+        }
+
+        if(!data.message) {
+            errors.message = "This field is required"
         }
         
         return errors;
@@ -47,13 +51,33 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setErrors(validateInfo(data))
-        setIsSubmitting(true)
+        if(!data.name || !data.country || !data.email || !data.message) {
+            setErrors(validateInfo(data))
+
+            console.log('Error')
+            
+        } else {
+            setErrors(validateInfo(data))
+
+            setIsSubmitting(true)
+            
+            // console.log(data)
+            
+            setOpen(false)
+
+            e.target.reset()
+
+        }
+
     }
 
     useEffect(() => {
         if(Object.keys(errors).length === 0 && isSubmitting) {
-            console.log(data)
+            // console.log(data)
+
+            setData(prevState => {
+                return {...prevState, name: '', country: '', email: '', message: ''}
+            })
         }
     }, [errors])
 
@@ -110,15 +134,16 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                             />
+                            {errors.message && <p>{errors.message}</p>}
                         </div>
                         <button className="submit" type="submit">Send</button>
                     </form>
                 </div>
             </div>
-            <div className="confirmation">
+            <div className={isSubmitting ? "confirmation active" : "confirmation"}>
                 <h2>Great!</h2>
                 <p>Thank you for contacting us <br/>You’ll hear from us soon enough</p>
-                <button className="send">Okay</button>
+                <button className="send" onClick={() => { setIsSubmitting(!isSubmitting) }}>Okay</button>
             </div>
         </div>
     )

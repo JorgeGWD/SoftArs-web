@@ -135,11 +135,10 @@ textarea
         transition: .5s ease
 
 .confirmation
-    z-index: 10
-    position: absolute
-    /*text-align: right*/
-    right: 50px
-    bottom: 0px
+    z-index: 100
+    position: fixed
+    right: 40px
+    bottom: -350px
     padding: 50px
     width: 300px
     text-align: center
@@ -147,6 +146,11 @@ textarea
     box-shadow: 3px 3px 15px rgba(0,0,0,.3)
     opacity: 0
     transition: .5s ease
+    &.active
+        z-index: 100
+        bottom: 0px
+        opacity: 1
+        transition: .5s ease
     h2
         margin-bottom: 50px
         font-weight: bold
