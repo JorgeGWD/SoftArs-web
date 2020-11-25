@@ -30,23 +30,51 @@
     z-index: 100
     position: relative
 
-textarea
-    display: block
-    padding: 10px
-    width: 100%
-    box-sizing: border-box
-    resize: none
-    // margin: 10px 0px
-    border: none
-    border-bottom: 2px solid #c4c4c4
-    transition: .5s ease
-    &:hover
-        border-bottom: 2px solid #03AFF5
+.text-area
+     position: relative
+    textarea
+        display: block
+        padding: 10px
+        width: 100%
+        box-sizing: border-box
+        resize: none
+        // margin: 10px 0px
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        font-size: 15px
+        border: none
+        border-bottom: 2px solid #c4c4c4
         transition: .5s ease
-    &:focus
-        outline: none
-        border-bottom: 2px solid #03AFF5
-        transition: .5s ease
+        &:hover
+            border-bottom: 2px solid #03AFF5
+            transition: .5s ease
+        &:focus
+            outline: none
+            border-bottom: 2px solid #03AFF5
+            transition: .5s ease
+        &:focus + label
+            top: -103px
+            color: #03AFF5
+            font-size: 12px
+        &:not(:placeholder-shown) + label
+            top: -103px
+            font-size: 12px
+            transition: .25s ease
+    label
+        position: relative
+        top: -25px
+        color: gray
+        font-size: 14px
+        transition: .25s ease
+    .text-error
+        position: absolute
+        bottom: 0px
+        p
+            // position: relative
+            top: -20px
+            padding: 0px
+            background-color: transparent
+            color: red
+            cont-size: 12px
 
 .box
     position: relative
@@ -80,42 +108,47 @@ textarea
         background-color: #fff
         .form-data
             padding: 30px
-            input
-                display: block
-                padding: 10px
-                width: calc( 100% - 20px )
-                margin: 5px 0px
-                border: none
-                border-bottom: 2px solid #c4c4c4
-                transition: .5s ease
-                &:hover
-                    border-bottom: 2px solid #03AFF5
+            .input-area
+                position: relative
+                .text-error
+                    position: absolute
+                    bottom: 0px
+                input
+                    display: block
+                    padding: 10px
+                    width: calc( 100% - 20px )
+                    margin: 5px 0px
+                    border: none
+                    border-bottom: 2px solid #c4c4c4
                     transition: .5s ease
-                &:focus
-                    outline: none
-                    border-bottom: 2px solid #03AFF5
-                    transition: .5s ease
-                &:focus + label
-                    top: -60px
-                    color: #03AFF5
-                    font-size: 12px
-                &:not(:placeholder-shown) + label
-                    top: -60px
-                    font-size: 12px
+                    &:hover
+                        border-bottom: 2px solid #03AFF5
+                        transition: .5s ease
+                    &:focus
+                        outline: none
+                        border-bottom: 2px solid #03AFF5
+                        transition: .5s ease
+                    &:focus + label
+                        top: -55px
+                        color: #03AFF5
+                        font-size: 12px
+                    &:not(:placeholder-shown) + label
+                        top: -55px
+                        font-size: 12px
+                        transition: .25s ease
+                label
+                    position: relative
+                    top: -30px
+                    color: gray
+                    font-size: 14px
                     transition: .25s ease
-            label
-                position: relative
-                top: -40px
-                color: gray
-                font-size: 14px
-                transition: .25s ease
-            p
-                position: relative
-                top: -20px
-                padding: 0px
-                background-color: transparent
-                color: red
-                font-size: 12px
+                p
+                    // position: relative
+                    top: -20px
+                    padding: 0px
+                    background-color: transparent
+                    color: red
+                    font-size: 12px
     button
         padding: 15px
         width: 100%
@@ -138,8 +171,8 @@ textarea
     z-index: 100
     position: fixed
     right: 2.5%
-    bottom: -350px
-    width: 300px
+    bottom: -400px
+    min-width: 400px
     text-align: center
     background-color: #fff
     box-shadow: 3px 3px 15px rgba(0,0,0,.3)

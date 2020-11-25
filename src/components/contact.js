@@ -92,49 +92,67 @@ const Contact = () => {
                     <img src={require('../images/times.svg')} className="close-icon" alt="Close" onClick={() => { setOpen(!open); }} />
                     <form noValidate autoComplete="off" onSubmit={handleSubmit}>
                         <div className="form-data">
-                            <input
-                                id="name"
-                                type="text"
-                                label="Enterprise"
-                                name="name"
-                                placeholder=" "
-                                onChange={handleChange}
-                                required
-                            />
-                            <label htmlFor="name">Enterprise</label>
-                            {errors.name && <p>{errors.name}</p>}
-                            <input
-                                id="country"
-                                type="text"
-                                label="Country"
-                                name="country"
-                                placeholder=" "
-                                onChange={handleChange}
-                                required
-                            />
-                            <label htmlFor="country">Country</label>
-                            {errors.country && <p>{errors.country}</p>}
-                            <input
-                                id="email"
-                                type="email"
-                                label="Your email"
-                                name="email"
-                                placeholder=" "
-                                onChange={handleChange}
-                                required
-                            />
-                            <label htmlFor="email">Your email</label>
-                            {errors.email && <p>{errors.email}</p>}
-                            <textarea
-                                id="message"
-                                label="Your message"
-                                name="message"
-                                rows="4"
-                                defaultValue=""
-                                onChange={handleChange}
-                                required
-                            />
-                            {errors.message && <p>{errors.message}</p>}
+                            <div className="input-area">
+                                <input
+                                    id="name"
+                                    type="text"
+                                    label="Enterprise"
+                                    name="name"
+                                    placeholder=" "
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <label htmlFor="name">Enterprise</label>
+                                <div  className="text-error">
+                                    {errors.name && <p>{errors.name}</p>}
+                                </div>
+                            </div>
+                            <div className="input-area">
+                                <input
+                                    id="country"
+                                    type="text"
+                                    label="Country"
+                                    name="country"
+                                    placeholder=" "
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <label htmlFor="country">Country</label>
+                                <div className="text-error">
+                                    {errors.country && <p>{errors.country}</p>}
+                                </div>
+                            </div>
+                            <div className="input-area">
+                                <input
+                                    id="email"
+                                    type="email"
+                                    label="Your email"
+                                    name="email"
+                                    placeholder=" "
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <label htmlFor="email">Your email</label>
+                                <div className="text-error">
+                                    {errors.email && <p>{errors.email}</p>}
+                                </div>
+                            </div>
+                            <div className="text-area">
+                                <textarea
+                                    id="message"
+                                    label="Your message"
+                                    name="message"
+                                    rows="4"
+                                    placeholder=" "
+                                    defaultValue=""
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <label htmlFor="message">Your message</label>
+                                <div className="text-error">
+                                    {errors.message && <p>{errors.message}</p>}
+                                </div>
+                            </div>
                         </div>
                         <button className="submit" type="submit">Send</button>
                     </form>

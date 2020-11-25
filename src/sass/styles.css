@@ -808,30 +808,66 @@ p {
   position: relative;
 }
 
-textarea {
+.text-area {
+  padding-top: 10px;
+}
+
+.text-area textarea {
   display: block;
   padding: 10px;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   resize: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
   border: none;
   border-bottom: 2px solid #c4c4c4;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-textarea:hover {
+.text-area textarea:hover {
   border-bottom: 2px solid #03AFF5;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-textarea:focus {
+.text-area textarea:focus {
   outline: none;
   border-bottom: 2px solid #03AFF5;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+}
+
+.text-area textarea:focus + label {
+  top: -103px;
+  color: #03AFF5;
+  font-size: 12px;
+}
+
+.text-area textarea:not(:placeholder-shown) + label {
+  top: -103px;
+  font-size: 12px;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.text-area label {
+  position: relative;
+  top: -35px;
+  color: gray;
+  font-size: 14px;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.text-area p {
+  top: -20px;
+  padding: 0px;
+  background-color: transparent;
+  color: red;
+  cont-size: 12px;
 }
 
 .box {
@@ -879,7 +915,16 @@ textarea:focus {
   padding: 30px;
 }
 
-.box form .form-data input {
+.box form .form-data .input-area {
+  position: relative;
+}
+
+.box form .form-data .input-area .text-error {
+  position: absolute;
+  bottom: 0px;
+}
+
+.box form .form-data .input-area input {
   display: block;
   padding: 10px;
   width: calc( 100% - 20px);
@@ -890,43 +935,42 @@ textarea:focus {
   transition: .5s ease;
 }
 
-.box form .form-data input:hover {
+.box form .form-data .input-area input:hover {
   border-bottom: 2px solid #03AFF5;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-.box form .form-data input:focus {
+.box form .form-data .input-area input:focus {
   outline: none;
   border-bottom: 2px solid #03AFF5;
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
-.box form .form-data input:focus + label {
-  top: -60px;
+.box form .form-data .input-area input:focus + label {
+  top: -55px;
   color: #03AFF5;
   font-size: 12px;
 }
 
-.box form .form-data input:not(:placeholder-shown) + label {
-  top: -60px;
+.box form .form-data .input-area input:not(:placeholder-shown) + label {
+  top: -55px;
   font-size: 12px;
   -webkit-transition: .25s ease;
   transition: .25s ease;
 }
 
-.box form .form-data label {
+.box form .form-data .input-area label {
   position: relative;
-  top: -40px;
+  top: -30px;
   color: gray;
   font-size: 14px;
   -webkit-transition: .25s ease;
   transition: .25s ease;
 }
 
-.box form .form-data p {
-  position: relative;
+.box form .form-data .input-area p {
   top: -20px;
   padding: 0px;
   background-color: transparent;
@@ -963,8 +1007,8 @@ textarea:focus {
   z-index: 100;
   position: fixed;
   right: 2.5%;
-  bottom: -350px;
-  width: 300px;
+  bottom: -400px;
+  min-width: 400px;
   text-align: center;
   background-color: #fff;
   -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
