@@ -1,5 +1,4 @@
 import React from 'react'
-// import './App.css'
 import '../src/sass/styles.css'
 import 'animate.css/animate.min.css'
 
