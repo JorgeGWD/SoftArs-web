@@ -808,68 +808,6 @@ p {
   position: relative;
 }
 
-.text-area {
-  padding-top: 10px;
-}
-
-.text-area textarea {
-  display: block;
-  padding: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  resize: none;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 15px;
-  border: none;
-  border-bottom: 2px solid #c4c4c4;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.text-area textarea:hover {
-  border-bottom: 2px solid #03AFF5;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.text-area textarea:focus {
-  outline: none;
-  border-bottom: 2px solid #03AFF5;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.text-area textarea:focus + label {
-  top: -103px;
-  color: #03AFF5;
-  font-size: 12px;
-}
-
-.text-area textarea:not(:placeholder-shown) + label {
-  top: -103px;
-  font-size: 12px;
-  -webkit-transition: .25s ease;
-  transition: .25s ease;
-}
-
-.text-area label {
-  position: relative;
-  top: -35px;
-  color: gray;
-  font-size: 14px;
-  -webkit-transition: .25s ease;
-  transition: .25s ease;
-}
-
-.text-area p {
-  top: -20px;
-  padding: 0px;
-  background-color: transparent;
-  color: red;
-  cont-size: 12px;
-}
-
 .box {
   position: relative;
   /*text-align: right*/
@@ -978,6 +916,74 @@ p {
   font-size: 12px;
 }
 
+.box form .form-data .text-area {
+  position: relative;
+}
+
+.box form .form-data .text-area .text-error {
+  position: absolute;
+  bottom: -5px;
+}
+
+.box form .form-data .text-area textarea {
+  display: block;
+  margin-top: 6px;
+  padding: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.box form .form-data .text-area textarea:hover {
+  border-bottom: 2px solid #03AFF5;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.box form .form-data .text-area textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #03AFF5;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.box form .form-data .text-area textarea:focus + label {
+  top: -103px;
+  color: #03AFF5;
+  font-size: 12px;
+}
+
+.box form .form-data .text-area textarea:not(:placeholder-shown) + label {
+  top: -103px;
+  font-size: 12px;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.box form .form-data .text-area label {
+  position: relative;
+  top: -25px;
+  color: gray;
+  font-size: 14px;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.box form .form-data .text-area p {
+  top: -20px;
+  padding: 0px;
+  background-color: transparent;
+  color: red;
+  font-size: 12px;
+}
+
 .box button {
   padding: 15px;
   width: 100%;
@@ -1008,7 +1014,6 @@ p {
   position: fixed;
   right: 2.5%;
   bottom: -400px;
-  min-width: 400px;
   text-align: center;
   background-color: #fff;
   -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
